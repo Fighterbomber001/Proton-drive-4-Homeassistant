@@ -1,0 +1,12 @@
+{
+  "domain": "proton_drive_backup",
+  "name": "Proton Drive",
+  "after_dependencies": ["backup"],
+  "codeowners": ["@Fighterbomber001"],
+  "config_flow": true,
+  "documentation": "https://github.com/Fighterbomber001/Proton-drive-4-Homeassistant#readme",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/Fighterbomber001/Proton-drive-4-Homeassistant/issues",
+  "version": "1.0.0"
+}

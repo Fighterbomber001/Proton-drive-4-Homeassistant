@@ -1,0 +1,44 @@
+{
+  "title": "Proton Drive",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Proton Drive Backup verbinden",
+        "description": "Aktiviere zuerst den nativen Sicherungsmodus und melde dich in der App Proton Drive Backup bei Proton an. Gib hier die interne Adresse der App und ihren lokalen Kopplungsschlüssel ein.",
+        "data": {"backend_url": "Interne App-Adresse", "integration_token": "Lokaler Kopplungsschlüssel"}
+      },
+      "reauth_confirm": {
+        "title": "Neuen Kopplungsschlüssel eingeben",
+        "description": "Verwende den integration_token derselben App-Installation und nicht dein Proton-Passwort.",
+        "data": {"backend_url": "Interne App-Adresse", "integration_token": "Lokaler Kopplungsschlüssel"}
+      },
+      "reconfigure": {
+        "title": "App-Verbindung aktualisieren",
+        "description": "Gib die interne Adresse und den lokalen Kopplungsschlüssel derselben App-Installation ein.",
+        "data": {"backend_url": "Interne App-Adresse", "integration_token": "Lokaler Kopplungsschlüssel"}
+      }
+    },
+    "error": {
+      "invalid_url": "Gib eine interne HTTP(S)-Adresse ohne Zugangsdaten, Pfad oder URL-Parameter ein.",
+      "invalid_auth": "Gib den lokalen Kopplungsschlüssel der App ein (32–128 URL-sichere Zeichen), nicht dein Proton-Passwort.",
+      "cannot_connect": "Die App ist nicht erreichbar. Prüfe ihre Adresse und ob der native Sicherungsmodus aktiv ist.",
+      "authentication_required": "Melde dich zuerst in der App Proton Drive Backup bei Proton an und versuche es dann erneut.",
+      "invalid_backend_response": "Die App hat nicht wie erwartet geantwortet. Verwende eine passende App-Version mit nativem Sicherungsmodus."
+    },
+    "abort": {
+      "already_configured": "Diese App-Installation ist bereits gekoppelt.",
+      "unique_id_mismatch": "Hinter der Adresse steckt eine andere App-Installation. Der gespeicherte Sicherungsort wurde nicht geändert."
+    }
+  },
+  "exceptions": {
+    "invalid_url": {"message": "Die gespeicherte interne App-Adresse ist ungültig."},
+    "invalid_auth": {"message": "Die App hat den lokalen Kopplungsschlüssel abgelehnt. Aktualisiere ihn mit dem Schlüssel aus der App-Konfiguration."},
+    "backend_unavailable": {"message": "Die App Proton Drive Backup ist nicht erreichbar oder die Verbindung wurde unterbrochen."},
+    "authentication_required": {"message": "Melde dich in der App Proton Drive Backup erneut bei Proton an."},
+    "installation_mismatch": {"message": "Unter der gespeicherten Adresse läuft nicht mehr die ursprünglich gekoppelte App-Installation."},
+    "invalid_backend_response": {"message": "Die Backup-App hat ungültige oder inkompatible Daten geliefert."},
+    "backup_not_found": {"message": "Diese Sicherung wurde in Proton Drive nicht gefunden."},
+    "delete_not_supported": {"message": "Das Löschen von Proton-Drive-Sicherungen wird nicht unterstützt. Die Datei in Proton Drive wurde nicht entfernt."},
+    "operation_failed": {"message": "Proton Drive hat den Sicherungsvorgang nicht bestätigt."}
+  }
+}

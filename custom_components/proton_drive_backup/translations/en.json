@@ -1,0 +1,44 @@
+{
+  "title": "Proton Drive",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Proton Drive Backup",
+        "description": "Enable native backup mode and sign in to Proton in the Proton Drive Backup app first. Enter the app's private address and local pairing token here.",
+        "data": {"backend_url": "Private app address", "integration_token": "Local pairing token"}
+      },
+      "reauth_confirm": {
+        "title": "Enter the new pairing token",
+        "description": "Use the integration_token from the same Proton Drive Backup app. Do not enter your Proton password.",
+        "data": {"backend_url": "Private app address", "integration_token": "Local pairing token"}
+      },
+      "reconfigure": {
+        "title": "Update the app connection",
+        "description": "Enter the private address and local pairing token of the same app installation.",
+        "data": {"backend_url": "Private app address", "integration_token": "Local pairing token"}
+      }
+    },
+    "error": {
+      "invalid_url": "Enter a private HTTP(S) address without credentials, a path, or URL parameters.",
+      "invalid_auth": "Enter the app's local pairing token (32–128 URL-safe characters), not your Proton password.",
+      "cannot_connect": "The app is not reachable. Verify its address and that native backup mode is enabled.",
+      "authentication_required": "Sign in to Proton in the Proton Drive Backup app first, then try again.",
+      "invalid_backend_response": "The app did not respond as expected. Use a matching native-mode app version."
+    },
+    "abort": {
+      "already_configured": "This app installation is already paired.",
+      "unique_id_mismatch": "This address points to a different app installation. The saved destination was not changed."
+    }
+  },
+  "exceptions": {
+    "invalid_url": {"message": "The saved private app address is not valid."},
+    "invalid_auth": {"message": "The app rejected the local pairing token. Update it with the token from the app configuration."},
+    "backend_unavailable": {"message": "The Proton Drive Backup app is not reachable or the connection was interrupted."},
+    "authentication_required": {"message": "Sign in to Proton again in the Proton Drive Backup app."},
+    "installation_mismatch": {"message": "The app at the saved address is not the original paired installation."},
+    "invalid_backend_response": {"message": "The backup app returned invalid or incompatible data."},
+    "backup_not_found": {"message": "This backup could not be found on Proton Drive."},
+    "delete_not_supported": {"message": "Deleting Proton Drive backups is not supported. The remote backup has not been removed."},
+    "operation_failed": {"message": "The backup operation was not confirmed by Proton Drive."}
+  }
+}
